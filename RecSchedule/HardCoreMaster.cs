@@ -5,6 +5,8 @@ namespace RecSchedule
 {
 	public class HardCoreMaster : ActivitySelector
 	{
+		public static int LastActivity { get; set; }
+
 		public HardCoreMaster()
 		{
 			Activities = new List<RecActivity>
@@ -30,6 +32,15 @@ namespace RecSchedule
 					Description = "Witcher 3"  //  to do make this a hwiki link
 				}
 			};
+		}
+
+		public RecActivity SelectActivity()
+		{
+			var activity = Activities[LastActivity];
+			LastActivity++;
+			if (LastActivity == Activities.Count)
+				LastActivity = 0;
+			return activity;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace RecSchedule.Domain
 {
@@ -43,6 +44,41 @@ namespace RecSchedule.Domain
 		private DayOfWeek DayOfTheWeek()
 		{
 			return SessionDate.DayOfWeek;
+		}
+
+		internal string WikiLine(int sessionNumber)
+		{
+			var sb = new StringBuilder();
+			var strSessionNumber = (sessionNumber < 10) 
+				? " " + sessionNumber.ToString()
+				: sessionNumber.ToString();
+			sb.Append($"||  { strSessionNumber}   ||");
+			sb.Append($"   {SessionDate.ToString("ddd")}     ||");
+			sb.Append($"  {StartTime} {SessionTypeIndicator(SessionType)} ||");
+			sb.Append($"  {ColumnSized(20,Activity.Description)}  ||");
+			sb.Append($"  {ColumnSized(20,Activity.Comment)}  ||");
+			sb.AppendLine();
+			return sb.ToString();
+		}
+
+		private string SessionTypeIndicator(SessionType sessionType)
+		{
+			if (sessionType.Equals(SessionType.Double))
+				return " * ";
+			return "   ";
+		}
+
+		private string ColumnSized(int size, string data)
+		{
+			return data.PadRight(size).Substring(0,size);
+		}
+
+		internal bool ExactMatches(RecSession session)
+		{
+			if (session.SessionDate.Equals(SessionDate)
+				&& session.StartTime.Equals(StartTime) )
+				return true;
+			return false;
 		}
 	}
 }

@@ -1,10 +1,31 @@
 ﻿using RecSchedule.Domain;
+using System;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace RecSchedule.Tests
 {
 	public class RecScheduleTests
 	{
+		private readonly ITestOutputHelper output;
+
+		public RecScheduleTests(
+			ITestOutputHelper output)
+		{
+			this.output = output;
+		}
+
+		[Fact]
+		public void Main_DisplaysWikiOutput()
+		{
+			var cut = new ScheduleGenerator(
+				"2020-01-06",
+				Console.Out);
+			var result = cut.Generate();
+			output.WriteLine(result);
+			Assert.NotNull(result);
+		}
+
 		[Fact]
 		public void DefaultRecActivityDescription_IsFree()
 		{
