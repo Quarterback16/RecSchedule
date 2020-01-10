@@ -3,12 +3,17 @@ using System.Collections.Generic;
 
 namespace RecSchedule
 {
-	public class CasualMaster : ActivitySelector
+	public class HardCoreMaster : ActivitySelector
 	{
-		public CasualMaster()
+		public HardCoreMaster()
 		{
 			Activities = new List<RecActivity>
 			{
+				new RecActivity
+				{
+					Name = "Civilisation",
+					Description = "Civ 6"  //  to do make this a hwiki link
+				},
 				new RecActivity
 				{
 					Name = "Hearthstone",
@@ -26,6 +31,5 @@ namespace RecSchedule
 				}
 			};
 		}
-
 	}
 }

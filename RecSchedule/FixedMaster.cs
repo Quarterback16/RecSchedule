@@ -27,13 +27,37 @@ namespace RecSchedule
 				new RecSession
 				{
 					SessionType = SessionType.Casual,
-					SessionDate = new DateTime(2020, 1, 10),  // wednesday
+					SessionDate = new DateTime(2020, 1, 10),  // friday
 					StartTime = "1930",
 					Activity = new RecActivity
 					{
 						Name = "Hearthstone",
 						Description = "Hearthstone",
 						Comment = "Tavern Brawl"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Casual,
+					SessionDate = new DateTime(2020, 1, 11),  // saturday
+					StartTime = "0700",
+					Activity = new RecActivity
+					{
+						Name = "Forced booking to create slack time",
+						Description = "   ",
+						Comment = "unallocated"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Casual,
+					SessionDate = new DateTime(2020, 1, 11),  // saturday
+					StartTime = "0930",
+					Activity = new RecActivity
+					{
+						Name = "Gym",
+						Description = "Pump",
+						Comment = "Tuggeranong"
 					}
 				},
 			};

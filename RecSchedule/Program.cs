@@ -79,27 +79,97 @@ namespace RecSchedule
 		{
 			var sessionList = new List<RecSession>
 			{
-				new Domain.RecSession
+				new RecSession
 				{
 					SessionDate = weekStart,
-					SessionType = Domain.SessionType.Casual,
+					SessionType = SessionType.Casual,
 					StartTime = "1930",
-					Activity = new Domain.RecActivity()
+					Activity = new RecActivity()
 				},
-				new Domain.RecSession
+				new RecSession
 				{
 					SessionDate = weekStart.AddDays(2),
-					SessionType = Domain.SessionType.Casual,
+					SessionType = SessionType.Casual,
 					StartTime = "1930",
-					Activity = new Domain.RecActivity()
+					Activity = new RecActivity()
 				},
-				new Domain.RecSession
+				new RecSession
 				{
 					SessionDate = weekStart.AddDays(4),
-					SessionType = Domain.SessionType.Casual,
+					SessionType = SessionType.Casual,
 					StartTime = "1930",
-					Activity = new Domain.RecActivity()
-				}
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(5),
+					SessionType = SessionType.Casual,
+					StartTime = "0700",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(5),
+					SessionType = SessionType.Casual,
+					StartTime = "0930",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(5),
+					SessionType = SessionType.Double,
+					StartTime = "1100",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(5),
+					SessionType = SessionType.Double,
+					StartTime = "1500",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(5),
+					SessionType = SessionType.Double,
+					StartTime = "1930",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Casual,
+					StartTime = "0700",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Double,
+					StartTime = "0900",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Double,
+					StartTime = "1100",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Double,
+					StartTime = "1500",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Casual,
+					StartTime = "1930",
+					Activity = new RecActivity()
+				},
 			};
 			return sessionList;
 		}

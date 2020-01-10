@@ -13,11 +13,14 @@ namespace RecSchedule.Domain
 		public override string ToString()
 		{
 			return $@"{SessionDate.ToString("yyyy-MM-dd")} {
+				SessionDate.ToString("ddd")
+				} {
 				StartTime
 				} {
 				SessionType
 				} {
-				Activity.Description} {
+				Activity.Description
+				} {
 				Activity.Comment
 				}";
 		}
