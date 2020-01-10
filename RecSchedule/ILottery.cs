@@ -1,6 +1,6 @@
 ﻿namespace RecSchedule
 {
-	public interface IGameLottery
+	public interface ILottery
 	{
 		string Winner();
 	}

@@ -1,4 +1,5 @@
 ﻿using RecSchedule.Domain;
+using System;
 using System.Collections.Generic;
 
 namespace RecSchedule
@@ -14,7 +15,7 @@ namespace RecSchedule
 				new RecActivity
 				{
 					Name = "Hearthstone",
-					Description = "Hearthstone link"  //  to do make this a hwiki link
+					Description = HearthstoneLink()
 				},
 				new RecActivity
 				{
@@ -35,7 +36,19 @@ namespace RecSchedule
 			LastActivity++;
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
+#if !DEBUG
+			activity.Description = $@"{
+				activity.Description
+				} (cas-{
+				LastActivity
+				})";
+#endif
 			return activity;
+		}
+
+		public string HearthstoneLink()
+		{
+			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
 		}
 	}
 }

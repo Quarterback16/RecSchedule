@@ -9,11 +9,14 @@ namespace RecSchedule
 		public List<RecSession> RegularBookings { get; set; }
 		public List<RecSession> OnceOffBookings { get; set; }
 
-		private readonly IGameLottery _gameLottery;
+		private readonly ILottery _gameLottery;
+		private readonly ILottery _mediaLottery;
 		public FixedMaster(
-			IGameLottery gameLottery)
+			ILottery gameLottery,
+			ILottery mediaLottery)
 		{
 			_gameLottery = gameLottery;
+			_mediaLottery = mediaLottery;
 			LoadRegularBookings();
 			LoadOnceOffBookings();
 		}
@@ -22,18 +25,18 @@ namespace RecSchedule
 		{
 			OnceOffBookings = new List<RecSession>
 			{
-				//new RecSession
-				//{
-				//	SessionType = SessionType.Double,
-				//	SessionDate = new DateTime(2020, 1, 12),
-				//	StartTime = "0830",
-				//	Activity = new RecActivity
-				//	{
-				//		Name = "NFL",
-				//		Description = "[[NFL]]",
-				//		Comment = " MV @ [[SF]]"
-				//	}
-				//},
+				new RecSession
+				{
+					SessionType = SessionType.Double,
+					SessionDate = new DateTime(2020, 1, 12),
+					StartTime = "0830",
+					Activity = new RecActivity
+					{
+						Name = "NFL",
+						Description = "[[NFL]]",
+						Comment = " MV @ [[SF]]"
+					}
+				},
 				new RecSession
 				{
 					SessionType = SessionType.Double,
@@ -61,8 +64,8 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Gwent",
-						Description = "Gwent link",
-						Comment = "Gwentsday"
+						Description = "[[Gwent]]",
+						Comment = "fixed: Gwentsday"
 					}
 				},
 				new RecSession
@@ -73,8 +76,8 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Hearthstone",
-						Description = "Hearthstone",
-						Comment = "Tavern Brawl"
+						Description = HearthstoneLink(),
+						Comment = "fixed: Tavern Brawl"
 					}
 				},
 				new RecSession
@@ -86,7 +89,7 @@ namespace RecSchedule
 					{
 						Name = "Forced booking to create slack time",
 						Description = "   ",
-						Comment = "unallocated"
+						Comment = "fixed: unallocated"
 					}
 				},
 				new RecSession
@@ -98,7 +101,7 @@ namespace RecSchedule
 					{
 						Name = "Gym",
 						Description = "Pump",
-						Comment = "Tuggeranong"
+						Comment = "fixed: Tuggeranong"
 					}
 				},
 				new RecSession
@@ -109,8 +112,8 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Media",
-						Description = "TV or Movie",  // randomize from a queue
-						Comment = "random"
+						Description = _mediaLottery.Winner(),
+						Comment = "fixed: lottery"
 					}
 				},
 				new RecSession
@@ -122,7 +125,7 @@ namespace RecSchedule
 					{
 						Name = "Forced booking to create slack time",
 						Description = "   ",
-						Comment = "unallocated"
+						Comment = "fixed: unallocated"
 					}
 				},
 				new RecSession
@@ -134,10 +137,15 @@ namespace RecSchedule
 					{
 						Name = "Random oddball game",
 						Description = _gameLottery.Winner(),
-						Comment = "lottery"
+						Comment = "fixed: lottery"
 					}
 				},
 			};
+		}
+
+		public string HearthstoneLink()
+		{
+			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
 		}
 
 		public RecActivity BookingFor(RecSession session)

@@ -1,4 +1,5 @@
 ﻿using RecSchedule.Domain;
+using System;
 using System.Collections.Generic;
 
 namespace RecSchedule
@@ -14,25 +15,31 @@ namespace RecSchedule
 				new RecActivity
 				{
 					Name = "Civilisation",
-					Description = "Civ 6"  //  to do make this a hwiki link
+					Description = "[[CivilizationVI]]"
 				},
 				new RecActivity
 				{
 					Name = "Hearthstone",
-					Description = "Hearthstone"  //  to do make this a hwiki link
+					Description = HearthstoneLink()
 				},
 				new RecActivity
 				{
 					Name = "Gwent",
-					Description = "Gwent"  //  to do make this a hwiki link
+					Description = "[[Gwent]]" 
 				},
 				new RecActivity
 				{
 					Name = "Witcher 3",
-					Description = "Witcher 3"  //  to do make this a hwiki link
+					Description = "[[TheWitcher3]]" 
 				}
 			};
 		}
+
+		public string HearthstoneLink()
+		{
+			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
+		}
+
 
 		public RecActivity SelectActivity()
 		{
@@ -40,6 +47,13 @@ namespace RecSchedule
 			LastActivity++;
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
+#if !DEBUG
+			activity.Description = $@"{
+				activity.Description
+				} (cor-{
+				LastActivity
+				})";
+#endif
 			return activity;
 		}
 	}
