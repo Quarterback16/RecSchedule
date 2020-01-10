@@ -9,8 +9,11 @@ namespace RecSchedule
 		public List<RecSession> RegularBookings { get; set; }
 		public List<RecSession> OnceOffBookings { get; set; }
 
-		public FixedMaster()
+		private readonly IGameLottery _gameLottery;
+		public FixedMaster(
+			IGameLottery gameLottery)
 		{
+			_gameLottery = gameLottery;
 			LoadRegularBookings();
 			LoadOnceOffBookings();
 		}
@@ -19,18 +22,18 @@ namespace RecSchedule
 		{
 			OnceOffBookings = new List<RecSession>
 			{
-				new RecSession
-				{
-					SessionType = SessionType.Double,
-					SessionDate = new DateTime(2020, 1, 12),
-					StartTime = "0830",
-					Activity = new RecActivity
-					{
-						Name = "NFL",
-						Description = "[[NFL]]",
-						Comment = " MV @ [[SF]]"
-					}
-				},
+				//new RecSession
+				//{
+				//	SessionType = SessionType.Double,
+				//	SessionDate = new DateTime(2020, 1, 12),
+				//	StartTime = "0830",
+				//	Activity = new RecActivity
+				//	{
+				//		Name = "NFL",
+				//		Description = "[[NFL]]",
+				//		Comment = " MV @ [[SF]]"
+				//	}
+				//},
 				new RecSession
 				{
 					SessionType = SessionType.Double,
@@ -121,7 +124,19 @@ namespace RecSchedule
 						Description = "   ",
 						Comment = "unallocated"
 					}
-				},          
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Double,
+					SessionDate = new DateTime(2020, 1, 12),  // Sunday
+					StartTime = "0830",
+					Activity = new RecActivity
+					{
+						Name = "Random oddball game",
+						Description = _gameLottery.Winner(),
+						Comment = "lottery"
+					}
+				},
 			};
 		}
 

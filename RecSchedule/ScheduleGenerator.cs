@@ -34,7 +34,8 @@ namespace RecSchedule
 			//  load sessions available
 			var sessions = LoadSessions(weekStart);
 
-			var _fixedMaster = new FixedMaster();
+			var _fixedMaster = new FixedMaster(
+				new GameLottery());
 
 			ApplyFixedBookings(
 				sessions,
@@ -131,7 +132,7 @@ namespace RecSchedule
 		private string DisplayHeader()
 		{
 			return Output(
-				"|| **#** ||  **Day**  || **Time**  ||  **Allocation**        ||  **Comments**          ||");
+				"|| **#** ||  **Day**  || **Time**  ||  **Allocation**                  ||  **Comments**          ||");
 		}
 
 		private static List<RecSession> LoadSessions(
