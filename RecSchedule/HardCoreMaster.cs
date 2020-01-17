@@ -14,6 +14,11 @@ namespace RecSchedule
 			{
 				new RecActivity
 				{
+					Name = "Coding Project",
+					Description = "NextCodingProject"
+				},
+				new RecActivity
+				{
 					Name = "Civilisation",
 					Description = "[[CivilizationVI]]"
 				},

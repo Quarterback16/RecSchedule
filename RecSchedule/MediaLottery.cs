@@ -133,6 +133,22 @@ namespace RecSchedule
 				{
 					Name = "Se7en (carnage)"
 				},
+				new Movie
+				{
+					Name = "Rounders"
+				},
+				new Movie
+				{
+					Name = "JoJo Rabbit"
+				},
+				new Movie
+				{
+					Name = "The House"
+				},
+				new Movie
+				{
+					Name = "Any Given Sunday"
+				},
 			};
 		}
 	}

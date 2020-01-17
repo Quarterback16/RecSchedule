@@ -23,7 +23,8 @@ namespace RecSchedule
 		public string Winner()
 		{
 			LoadTheHat();
-			var rnd = new Random();
+			var seedTime = DateTime.Now.ToString("ss");
+			var rnd = new Random(Int32.Parse(seedTime));
 			int winner = rnd.Next(0, TheHat.Count);
 			return TheHat[winner].Name;
 		}

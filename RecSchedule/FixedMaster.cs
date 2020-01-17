@@ -32,8 +32,8 @@ namespace RecSchedule
 					StartTime = "0830",
 					Activity = new RecActivity
 					{
-						Name = "NFL",
-						Description = "[[NFL]]",
+						Name = "NFL Divisional Playoff",
+						Description = "[[NFL]] Divisional Playoff",
 						Comment = " MV @ [[SF]]"
 					}
 				},
@@ -44,9 +44,33 @@ namespace RecSchedule
 					StartTime = "1130",
 					Activity = new RecActivity
 					{
-						Name = "NFL",
-						Description = "[[NFL]]",
+						Name = "NFL Divisional Playoff",
+						Description = "[[NFL]] Divisional Playoff",
 						Comment = " TT @ BR"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Double,
+					SessionDate = new DateTime(2020, 1, 13),
+					StartTime = "1930",
+					Activity = new RecActivity
+					{
+						Name = "NFL Divisional Playoff",
+						Description = "[[NFL]] Divisional Playoff",
+						Comment = " SS @ GB"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Double,
+					SessionDate = new DateTime(2020, 1, 24),
+					StartTime = "1930",
+					Activity = new RecActivity
+					{
+						Name = "Full Moon Poker Club",
+						Description = "Full Moon Poker Club",
+						Comment = " Texas Holdem"
 					}
 				},
 			};
@@ -106,14 +130,14 @@ namespace RecSchedule
 				},
 				new RecSession
 				{
-					SessionType = SessionType.Casual,
+					SessionType = SessionType.Double,
 					SessionDate = new DateTime(2020, 1, 11),  // saturday
 					StartTime = "1930",
 					Activity = new RecActivity
 					{
-						Name = "Media",
-						Description = _mediaLottery.Winner(),
-						Comment = "fixed: lottery"
+						Name = "Lonnie Time",
+						Description = "joint activity with LonnieColonna",
+						Comment = "fixed: Lonnie time"
 					}
 				},
 				new RecSession
@@ -137,6 +161,18 @@ namespace RecSchedule
 					{
 						Name = "Random oddball game",
 						Description = _gameLottery.Winner(),
+						Comment = "fixed: lottery"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Double,
+					SessionDate = new DateTime(2020, 1, 12),  // Sunday
+					StartTime = "1930",
+					Activity = new RecActivity
+					{
+						Name = "Media Lottery",
+						Description = _mediaLottery.Winner(),
 						Comment = "fixed: lottery"
 					}
 				},

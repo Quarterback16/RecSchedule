@@ -19,7 +19,7 @@ namespace RecSchedule.Tests
 		public void Main_DisplaysWikiOutput()
 		{
 			var cut = new ScheduleGenerator(
-				"2020-01-06",
+				"2020-01-13",
 				Console.Out);
 			var result = cut.Generate();
 			output.WriteLine(result);
