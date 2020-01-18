@@ -83,6 +83,30 @@ namespace RecSchedule
 				new RecSession
 				{
 					SessionType = SessionType.Casual,
+					SessionDate = new DateTime(2020, 1, 7),  // tuesday
+					StartTime = "1930",
+					Activity = new RecActivity
+					{
+						Name = "Gym",
+						Description = "Pump",
+						Comment = "fixed: Homeworld"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Casual,
+					SessionDate = new DateTime(2020, 1, 9),  // thursday
+					StartTime = "1930",
+					Activity = new RecActivity
+					{
+						Name = "Gym",
+						Description = "Pump",
+						Comment = "fixed: Homeworld"
+					}
+				},
+				new RecSession
+				{
+					SessionType = SessionType.Casual,
 					SessionDate = new DateTime(2020, 1, 8),  // wednesday
 					StartTime = "1930",
 					Activity = new RecActivity

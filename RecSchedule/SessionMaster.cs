@@ -20,7 +20,21 @@ namespace RecSchedule
 				},
 				new RecSession
 				{
+					SessionDate = weekStart.AddDays(1),
+					SessionType = SessionType.Casual,
+					StartTime = "1930",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
 					SessionDate = weekStart.AddDays(2),
+					SessionType = SessionType.Casual,
+					StartTime = "1930",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(3),
 					SessionType = SessionType.Casual,
 					StartTime = "1930",
 					Activity = new RecActivity()
@@ -91,8 +105,15 @@ namespace RecSchedule
 				new RecSession
 				{
 					SessionDate = weekStart.AddDays(6),
-					SessionType = SessionType.Double,
+					SessionType = SessionType.Casual,
 					StartTime = "1430",
+					Activity = new RecActivity()
+				},
+				new RecSession
+				{
+					SessionDate = weekStart.AddDays(6),
+					SessionType = SessionType.Casual,
+					StartTime = "1600",
 					Activity = new RecActivity()
 				},
 				new RecSession

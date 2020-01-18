@@ -1,5 +1,4 @@
 ﻿using RecSchedule.Domain;
-using System;
 using System.Collections.Generic;
 
 namespace RecSchedule
@@ -8,7 +7,17 @@ namespace RecSchedule
 	{
 		public static int LastActivity { get; set; }
 
+		const string K_ActivitySubType = "Casual";
+
 		public CasualMaster()
+		{
+			//  set LastActivity from State
+			LastActivity = GetLastActivity(
+				activitySubType: K_ActivitySubType);
+			LoadActivities();
+		}
+
+		private void LoadActivities()
 		{
 			Activities = new List<RecActivity>
 			{
@@ -36,19 +45,22 @@ namespace RecSchedule
 			LastActivity++;
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
-#if !DEBUG
+
 			activity.Description = $@"{
 				activity.Description
 				} (cas-{
 				LastActivity
 				})";
-#endif
+
 			return activity;
 		}
 
-		public string HearthstoneLink()
+		public void SaveState()
 		{
-			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
+			SaveState(
+				K_ActivitySubType, 
+				LastActivity);
 		}
+
 	}
 }

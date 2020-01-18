@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<!--Comments: Counters-->
+<counter-list>
+  <counter-item>
+    <name>Casual</name>
+    <count>0</count>
+  </counter-item>
+  <counter-item>
+    <name>Hard-Core</name>
+    <count>0</count>
+  </counter-item>
+</counter-list>

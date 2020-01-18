@@ -4,8 +4,10 @@ E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\RecSch
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\RecSchedule.runtimeconfig.dev.json
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\RecSchedule.dll
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\RecSchedule.pdb
-E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.csprojAssemblyReference.cache
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.AssemblyInfoInputs.cache
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.AssemblyInfo.cs
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.dll
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.pdb
+E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\counts.xml
+E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Debug\netcoreapp3.1\deploy.bat
+E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Debug\netcoreapp3.1\RecSchedule.csprojAssemblyReference.cache

@@ -8,8 +8,10 @@ namespace RecSchedule
 		{
 #if !DEBUG
 			var scheduleDate = DateTime.Now.AddDays(1);
+#else
+			var scheduleDate = new DateTime(2020, 1, 13);
 #endif
-			var scheduleDate = new DateTime(2020, 1, 6);
+
 			var scheduleDateOut = scheduleDate.ToString("yyyy-MM-dd");
 			if (args.Length > 0)
 				scheduleDateOut = args[0].ToString();

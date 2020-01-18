@@ -33,7 +33,8 @@ namespace RecSchedule
 			var weekStart = DateTime.Parse(ScheduleStarts);
 
 			//  load sessions available
-			var sessions = _sessionMaster.LoadSessions(weekStart);
+			var sessions = _sessionMaster.LoadSessions(
+				weekStart);
 
 			var _fixedMaster = new FixedMaster(
 				new GameLottery(),
@@ -48,21 +49,28 @@ namespace RecSchedule
 				_casualMaster,
 				_hardCoreMaster);
 
-#if !DEBUG
-			DisplayOutput(sessions);
-#else
+			SaveState(
+				_casualMaster,
+				_hardCoreMaster);
+
 			sb.Append(
 				DisplayWikiOutput(sessions));
-#endif
+
 			return sb.ToString();
+		}
+
+		private void SaveState(
+			CasualMaster casualMaster,
+			HardCoreMaster hardCoreMaster)
+		{
+			casualMaster.SaveState();
+			hardCoreMaster.SaveState();
 		}
 
 		private void AppendHeader(StringBuilder sb)
 		{
 			sb.Append(
 				Output($"=== Rec Schedule : {HwikiMonth(ScheduleStarts)} ==="));
-			sb.AppendLine(
-				Output(string.Empty));
 			sb.AppendLine(
 				Output(string.Empty));
 		}

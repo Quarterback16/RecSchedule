@@ -57,7 +57,9 @@ namespace RecSchedule.Domain
 			sb.Append($"  {StartTime} {SessionTypeIndicator(SessionType)} ||");
 			sb.Append($"  {ColumnSized(40,Activity.Description)}  ||");
 			sb.Append($"  {ColumnSized(20,Activity.Comment)}  ||");
+#if DEBUG
 			sb.AppendLine();
+#endif
 			return sb.ToString();
 		}
 
