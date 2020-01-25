@@ -7,8 +7,9 @@ namespace RecSchedule
 		static void Main(string[] args)
 		{
 #if !DEBUG
-			var scheduleDate = DateTime.Now.AddDays(1);
+			var scheduleDate = FindNextMonday();
 #else
+			//  test with a fixed Monday
 			var scheduleDate = new DateTime(2020, 1, 13);
 #endif
 
@@ -23,5 +24,17 @@ namespace RecSchedule
 			sg.Generate();
 		}
 
+		private static DateTime FindNextMonday()
+		{
+			var testDate = DateTime.Now;
+			while (!IsMonday(testDate))
+				testDate.AddDays(1);
+			return testDate;
+		}
+
+		public static bool IsMonday(DateTime dGame)
+		{
+			return dGame.DayOfWeek == DayOfWeek.Monday;
+		}
 	}
 }

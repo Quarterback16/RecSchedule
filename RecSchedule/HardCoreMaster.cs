@@ -1,5 +1,4 @@
 ﻿using RecSchedule.Domain;
-using System;
 using System.Collections.Generic;
 
 namespace RecSchedule
