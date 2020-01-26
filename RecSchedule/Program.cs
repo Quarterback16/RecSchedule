@@ -28,7 +28,7 @@ namespace RecSchedule
 		{
 			var testDate = DateTime.Now;
 			while (!IsMonday(testDate))
-				testDate.AddDays(1);
+				testDate = testDate.AddDays(1);
 			return testDate;
 		}
 
