@@ -46,11 +46,13 @@ namespace RecSchedule
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
 
-			activity.Description = $@"{
-				activity.Description
-				} (cas-{
-				LastActivity
-				})";
+			if (!activity.Description.Contains("(cas"))
+				//  first time being hit
+				activity.Description = $@"{
+					activity.Description
+					} (cas-{
+					LastActivity
+					})";
 
 			return activity;
 		}

@@ -42,11 +42,6 @@ namespace RecSchedule
 				},
 				new Entrant
 				{
-					Name = "The Irishman",
-					Balls = 20
-				},
-				new Entrant
-				{
 					Name = "Ad Astra (carnage)",
 					Balls = 20
 				},

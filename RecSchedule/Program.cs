@@ -10,7 +10,7 @@ namespace RecSchedule
 			var scheduleDate = FindNextMonday();
 #else
 			//  test with a fixed Monday
-			var scheduleDate = new DateTime(2020, 1, 13);
+			var scheduleDate = new DateTime(2020, 1, 27);
 #endif
 
 			var scheduleDateOut = scheduleDate.ToString("yyyy-MM-dd");

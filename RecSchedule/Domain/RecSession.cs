@@ -26,6 +26,11 @@ namespace RecSchedule.Domain
 				}";
 		}
 
+		public string SessionKey()
+		{
+			return SessionDate.ToString("yyyy-MM-dd") + StartTime; 
+		}
+
 		public bool IsBooked()
 		{
 			if (Activity == null)
@@ -82,5 +87,6 @@ namespace RecSchedule.Domain
 				return true;
 			return false;
 		}
+
 	}
 }

@@ -55,7 +55,6 @@ namespace RecSchedule
 				LastActivity);
 		}
 
-
 		public RecActivity SelectActivity()
 		{
 			var activity = Activities[LastActivity];
