@@ -37,13 +37,18 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
-					Name = "Gwent",
-					Description = "[[Gwent]]"
+					Name = "Next Learning Project",
+					Description = "NextLearningProject"
 				},
 				new RecActivity
 				{
-					Name = "Witcher 3",
-					Description = "[[TheWitcher3]]"
+					Name = "Galactic Civilisations III",
+					Description = "[[GalacticCivilizations_3]]"
+				},
+				new RecActivity
+				{
+					Name = "Next Book Non Technical",
+					Description = "NextBookNonTechnical"
 				}
 			};
 		}

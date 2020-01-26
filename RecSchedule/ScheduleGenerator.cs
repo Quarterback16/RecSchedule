@@ -148,7 +148,8 @@ namespace RecSchedule
 			foreach (var session in sortedSessions)
 			{
 				sb.Append(
-					Output(session.WikiLine(++line)));
+					Output(
+						session.WikiLine(++line)));
 			}
 			sb.Append(Threading(thisMonday));
 			return sb.ToString();
@@ -185,7 +186,7 @@ namespace RecSchedule
 		private string DisplayHeader()
 		{
 			return Output(
-				"|| **#** ||  **Day**  || **Time**  ||  **Allocation**                            ||  **Comments**          ||");
+				"|| **#** ||   **Day**    || **Time**  ||  **Allocation**                            ||  **Comments**          ||");
 		}
 
 

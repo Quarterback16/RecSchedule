@@ -58,7 +58,7 @@ namespace RecSchedule.Domain
 				? " " + sessionNumber.ToString()
 				: sessionNumber.ToString();
 			sb.Append($"||  { strSessionNumber}   ||");
-			sb.Append($"   {SessionDate.ToString("ddd")}     ||");
+			sb.Append($"   {SessionDate.ToString("ddd dd")}     ||");
 			sb.Append($"  {StartTime} {SessionTypeIndicator(SessionType)} ||");
 			sb.Append($"  {ColumnSized(40,Activity.Description)}  ||");
 			sb.Append($"  {ColumnSized(20,Activity.Comment)}  ||");

@@ -37,11 +37,6 @@ namespace RecSchedule
 				},
 				new Entrant
 				{
-					Name = "Star Wars the Last Jedi",
-					Balls = 20
-				},
-				new Entrant
-				{
 					Name = "Ad Astra (carnage)",
 					Balls = 20
 				},

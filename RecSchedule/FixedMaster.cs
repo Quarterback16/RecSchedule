@@ -197,7 +197,7 @@ namespace RecSchedule
 					{
 						Name = "Media Lottery",
 						Description = _mediaLottery.Winner(),
-						Comment = "fixed: lottery"
+						Comment = "fixed: lottery from NextTvSeries or NextMovie"
 					}
 				},
 			};
