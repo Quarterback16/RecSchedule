@@ -57,10 +57,11 @@ namespace RecSchedule
 
 		public RecActivity SelectActivity()
 		{
-			var activity = Activities[LastActivity];
 			LastActivity++;
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
+
+			var activity = Activities[LastActivity];
 
 			activity.Description = $@"{
 				activity.Description

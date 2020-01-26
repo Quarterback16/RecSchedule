@@ -41,10 +41,11 @@ namespace RecSchedule
 
 		public RecActivity SelectActivity()
 		{
-			var activity = Activities[LastActivity];
 			LastActivity++;
 			if (LastActivity == Activities.Count)
 				LastActivity = 0;
+
+			var activity = Activities[LastActivity];
 
 			if (!activity.Description.Contains("(cas"))
 				//  first time being hit
@@ -63,6 +64,5 @@ namespace RecSchedule
 				K_ActivitySubType, 
 				LastActivity);
 		}
-
 	}
 }
