@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace RecSchedule
 {
@@ -35,6 +36,19 @@ namespace RecSchedule
 		public static bool IsMonday(DateTime dGame)
 		{
 			return dGame.DayOfWeek == DayOfWeek.Monday;
+		}
+
+		public int WeekNumber(DateTime theDate)
+		{
+			DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(theDate);
+			if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+				theDate = theDate.AddDays(3);
+
+			// Return the week of our adjusted day
+			return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(
+				theDate,
+				CalendarWeekRule.FirstFourDayWeek,
+				DayOfWeek.Monday);
 		}
 	}
 }

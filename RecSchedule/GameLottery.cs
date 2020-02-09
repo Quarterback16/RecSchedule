@@ -11,12 +11,17 @@ namespace RecSchedule
 				new Entrant
 				{
 					Name = "[[FTL]]",
-					Balls = 4
+					Balls = 3
 				},
 				new Entrant
 				{
 					Name = "[[GalacticCivilizations_3]]",
 					Balls = 3
+				},
+				new Entrant
+				{
+					Name = "[[Anno_2025]]",
+					Balls = 2
 				},
 				new Entrant
 				{

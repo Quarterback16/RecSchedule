@@ -13,12 +13,12 @@ namespace RecSchedule
 				new Entrant
 				{
 					Name = "The Expanse",
-					Balls = 50
+					Balls = 40
 				},
 				new Entrant
 				{
 					Name = "Rick and Morty",
-					Balls = 30
+					Balls = 10
 				},
 				new Entrant
 				{
@@ -48,7 +48,7 @@ namespace RecSchedule
 				new Entrant
 				{
 					Name = "Wonder Woman Bloodlines (carnage)",
-					Balls = 10
+					Balls = 5
 				},
 
 			};
@@ -138,6 +138,10 @@ namespace RecSchedule
 				new Movie
 				{
 					Name = "Any Given Sunday"
+				},
+				new Movie
+				{
+					Name = "1917"
 				},
 			};
 		}

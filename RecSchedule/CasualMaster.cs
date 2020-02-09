@@ -33,9 +33,14 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
-					Name = "Witcher 3",
-					Description = "[[TheWitcher3]]" 
-				}
+					Name = "Reading",
+					Description = "NextBookRecreational"
+				},
+				//new RecActivity
+				//{
+				//	Name = "Witcher 3",
+				//	Description = "[[TheWitcher3]]" 
+				//}
 			};
 		}
 
