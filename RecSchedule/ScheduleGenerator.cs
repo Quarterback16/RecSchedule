@@ -74,6 +74,7 @@ namespace RecSchedule
                          RecSessions,
                          weekStart));
 
+
             return sb.ToString();
         }
 
@@ -183,12 +184,6 @@ namespace RecSchedule
             }
         }
 
-        private void DisplayOutput(List<RecSession> sessions)
-        {
-            foreach (var session in sessions)
-                Output(session.ToString());
-        }
-
         private string DisplayWikiOutput(
                List<RecSession> sessions,
                DateTime thisMonday)
@@ -208,8 +203,38 @@ namespace RecSchedule
                        Output(
                               session.WikiLine(++line)));
             }
-            sb.Append(Threading(thisMonday));
+            sb.AppendLine(Output(string.Empty));
+
+            sb.AppendLine(Output(GenerateActivityList()));
+
+            sb.AppendLine(Output(GenerateMediaList()));
+
+            sb.AppendLine(Output(GenerateGameList()));
+
+            sb.AppendLine(Threading(thisMonday));
             return sb.ToString();
+        }
+
+        private string GenerateGameList()
+        {
+            var gl = new GameList(
+                GameLottery);
+            return gl.Generate();
+        }
+
+        private string GenerateMediaList()
+        {
+            var ml = new MediaList(
+                MediaLottery);
+            return ml.Generate();
+        }
+
+        private string GenerateActivityList()
+        {
+            var am = new ActivityMatrix(
+                CasualMaster,
+                HardCoreMaster);
+            return am.Generate();
         }
 
         private string Threading(

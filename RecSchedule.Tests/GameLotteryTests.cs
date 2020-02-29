@@ -22,11 +22,11 @@ namespace RecSchedule.Tests
 		}
 
 		[Fact]
-		public void GameLottery_AfterLoading_HatHas_10_Entrants()
+		public void GameLottery_AfterLoading_HatHas_23_Entrants()
 		{
 			_sut.LoadTheHat();
 			Assert.Equal(
-				expected: 10,
+				expected: 23,
 				actual: _sut.TheHat.Count);
 		}
 	}

@@ -58,7 +58,7 @@ namespace RecSchedule
             {
                 var thisLine = SwikiTableRow(++i, item);
                 sb.Append(thisLine);
-                Console.WriteLine(thisLine);
+                //Console.WriteLine(thisLine);
             }
             sb.AppendLine(
                 $"  * there is one random {itemName} item chosen a week");

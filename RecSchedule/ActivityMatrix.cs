@@ -23,41 +23,24 @@ namespace RecSchedule
             var nRows = DetermineRowsInMatrix();
             sb.AppendLine(SwikiTableHeader());
             for (int i = 0; i < nRows; i++)
-
             {
-
                 string[] col = new string[3];
-
                 col[0] = i.ToString();
-
                 if (i < CasualMaster.Activities.Count)
-
                     col[1] = CasualMaster.Activities[i].Description;
-
                 else
-
                     col[1] = string.Empty;
 
                 if (i < HardcoreMaster.Activities.Count)
-
                     col[2] = HardcoreMaster.Activities[i].Description;
-
                 else
-
                     col[2] = string.Empty;
 
-
-
                 var thisLine = SwikiTableRow(col);
-
                 sb.Append(thisLine);
-
-                Console.WriteLine(thisLine);
-
+                //Console.WriteLine(thisLine);
             }
-
             return sb.ToString();
-
         }
 
         private string SwikiTableHeader()
@@ -89,17 +72,10 @@ namespace RecSchedule
         }
 
         private int DetermineRowsInMatrix()
-
         {
-
             var casualActivities = CasualMaster.Activities.Count;
-
             var hardCoreActivities = HardcoreMaster.Activities.Count;
-
             return Math.Max(casualActivities, hardCoreActivities);
-
         }
-
     }
-
 }

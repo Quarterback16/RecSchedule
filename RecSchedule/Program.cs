@@ -23,38 +23,6 @@ namespace RecSchedule
 				Console.Out);
 
 			sg.Generate();
-
-			GenerateActivityList(sg);
-
-			GenerateMediaList(sg);
-
-			GenerateGameList(sg);
 		}
-
-		private static void GenerateGameList(
-			ScheduleGenerator sg)
-		{
-			var gl = new GameList(
-				sg.GameLottery);
-			gl.Generate();
-		}
-
-		private static void GenerateMediaList(
-			ScheduleGenerator sg)
-		{
-			var ml = new MediaList(
-				sg.MediaLottery);
-			ml.Generate();
-		}
-
-		private static void GenerateActivityList(
-			ScheduleGenerator sg)
-		{
-			var am = new ActivityMatrix(
-				sg.CasualMaster,
-				sg.HardCoreMaster);
-			am.Generate();
-		}
-
 	}
 }

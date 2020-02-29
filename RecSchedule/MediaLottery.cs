@@ -17,6 +17,11 @@ namespace RecSchedule
 				},
 				new Entrant
 				{
+					Name = "Altered Carbon",
+					Balls = 30
+				},
+				new Entrant
+				{
 					Name = "Rick and Morty",
 					Balls = 10
 				},
