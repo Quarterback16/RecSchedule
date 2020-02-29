@@ -16,6 +16,9 @@ namespace RecSchedule
         public HardCoreMaster HardCoreMaster { get; set; }
         public List<RecSession> RecSessions { get; set; }
 
+        public MediaLottery MediaLottery { get; set; }
+        public GameLottery GameLottery { get; set; }
+
         public ScheduleGenerator(
                string dateIn,
                TextWriter outputWriter)
@@ -24,6 +27,8 @@ namespace RecSchedule
             _outputWriter = outputWriter;
             CasualMaster = new CasualMaster();
             HardCoreMaster = new HardCoreMaster();
+            MediaLottery = new MediaLottery();
+            GameLottery = new GameLottery();
         }
 
         public string Generate()
@@ -48,8 +53,8 @@ namespace RecSchedule
                          weekStart));
 
             var _fixedMaster = new FixedMaster(
-                  new GameLottery(),
-                  new MediaLottery());
+                  GameLottery,
+                  MediaLottery);
 
             ApplyFixedBookings(
                   RecSessions,

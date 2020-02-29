@@ -1,13 +1,9 @@
-﻿using System;
-
+﻿using RecSchedule.Helpers;
+using System;
 using System.Text;
 
-
-
 namespace RecSchedule
-
 {
-
     public class ActivityMatrix
     {
         public CasualMaster CasualMaster;
@@ -67,64 +63,30 @@ namespace RecSchedule
         private string SwikiTableHeader()
         {
             var sb = new StringBuilder();
-
             sb.AppendLine("=== Activity Matrix ===");
-
             var tableHeader = $@"||  {
-
-                ColumnOf(30, "**#**")
-
+                WikiUtils.ColumnOf(30, "**#**")
                 }    ||  {
-
-                ColumnOf(30, "**Casual**")
-
+                WikiUtils.ColumnOf(30, "**Casual**")
                 }  ||  {
-
-                ColumnOf(30, "**Hard Core**"
-
+                WikiUtils.ColumnOf(30, "**Hard Core**"
                 )}  ||";
 
             sb.Append(tableHeader);
-
             return sb.ToString();
-
         }
-
-
 
         private string SwikiTableRow(string[] col)
-
         {
-
             var sb = new StringBuilder();
-
             sb.Append("||  ");
-
             for (int i = 0; i < col.Length; i++)
-
             {
-
-                sb.Append($"  {ColumnOf(30, col[i])}  ||");
-
+                sb.Append($"  {WikiUtils.ColumnOf(30, col[i])}  ||");
             }
-
             sb.AppendLine();
-
             return sb.ToString();
-
         }
-
-
-
-        private string ColumnOf(int width, string contents)
-
-        {
-
-            return contents.PadRight(width).Substring(0, width);
-
-        }
-
-
 
         private int DetermineRowsInMatrix()
 

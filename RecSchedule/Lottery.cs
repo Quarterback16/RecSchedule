@@ -8,6 +8,9 @@ namespace RecSchedule
 		public List<Entrant> Entrants { get; set; }
 		public List<Entrant> TheHat { get; set; }
 
+		IEnumerable<Entrant> ILottery.Entrants 
+			=> Entrants;
+
 		public void LoadTheHat()
 		{
 			TheHat = new List<Entrant>();
