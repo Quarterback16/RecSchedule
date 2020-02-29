@@ -32,7 +32,7 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
-					Name = "Hearthstone",
+					Name = "Hearthstone Ladder Runs",
 					Description = HearthstoneLink()
 				},
 				new RecActivity

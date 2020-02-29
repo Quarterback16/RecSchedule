@@ -9,6 +9,9 @@ namespace RecSchedule.Domain
 		public string StartTime { get; set; }
 		public SessionType SessionType { get; set; }
 		public bool IsDouble { get; set; }
+
+		public bool IsFixed { get; set; }
+
 		public RecActivity Activity { get; set; }
 
 		public override string ToString()

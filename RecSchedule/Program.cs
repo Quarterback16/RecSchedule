@@ -23,6 +23,10 @@ namespace RecSchedule
 				Console.Out);
 
 			sg.Generate();
+			var am = new ActivityMatrix(
+				sg.CasualMaster,
+				sg.HardCoreMaster);
+			am.Generate();
 		}
 
 		private static DateTime FindNextMonday()

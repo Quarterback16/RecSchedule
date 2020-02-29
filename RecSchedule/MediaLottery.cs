@@ -37,20 +37,14 @@ namespace RecSchedule
 				},
 				new Entrant
 				{
-					Name = "Ad Astra (carnage)",
-					Balls = 20
-				},
-				new Entrant
-				{
-					Name = "Rambo Last Blood (carnage)",
-					Balls = 20
-				},
-				new Entrant
-				{
 					Name = "Wonder Woman Bloodlines (carnage)",
 					Balls = 5
 				},
-
+				new Entrant
+				{
+					Name = "1917",
+					Balls = 15
+				},
 			};
 			LoadMovies();
 			foreach (var movie in Movies)
@@ -138,10 +132,6 @@ namespace RecSchedule
 				new Movie
 				{
 					Name = "Any Given Sunday"
-				},
-				new Movie
-				{
-					Name = "1917"
 				},
 			};
 		}
