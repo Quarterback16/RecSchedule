@@ -160,8 +160,8 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Lonnie Time",
-						Description = "joint activity with LonnieColonna",
-						Comment = $"fixed: Lonnie time; {MoviesLink()}"
+						Description = $"with LonnieColonna {MoviesLink()}",
+						Comment = $"fixed: Lonnie time"
 					}
 				},
 				new RecSession

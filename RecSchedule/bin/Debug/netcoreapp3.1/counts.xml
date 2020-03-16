@@ -1,5 +1,5 @@
-﻿<?xml version="1.0"?>
-<!--Comments: Counters-->
+<?xml version="1.0"?>
+<!--Comments: Counts-->
 <counter-list>
   <counter-item>
     <name>Casual</name>
@@ -7,6 +7,6 @@
   </counter-item>
   <counter-item>
     <name>Hard-Core</name>
-    <count>4</count>
+    <count>2</count>
   </counter-item>
 </counter-list>
