@@ -161,7 +161,7 @@ namespace RecSchedule
 					{
 						Name = "Lonnie Time",
 						Description = "joint activity with LonnieColonna",
-						Comment = "fixed: Lonnie time"
+						Comment = $"fixed: Lonnie time; {MoviesLink()}"
 					}
 				},
 				new RecSession
@@ -206,6 +206,11 @@ namespace RecSchedule
 		public string HearthstoneLink()
 		{
 			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
+		}
+
+		public string MoviesLink()
+		{
+			return $"[[Movies-{DateTime.Now.ToString("yyyy-MM")}]]";
 		}
 
 		public RecActivity BookingFor(RecSession session)

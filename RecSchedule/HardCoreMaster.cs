@@ -37,13 +37,18 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
+					Name = "Galactic Civilisations III",
+					Description = "[[GalacticCivilizations_3]]"
+				},
+				new RecActivity
+				{
 					Name = "Next Learning Project",
 					Description = "NextLearningProject"
 				},
 				new RecActivity
 				{
-					Name = "Galactic Civilisations III",
-					Description = "[[GalacticCivilizations_3]]"
+					Name = "Anno",
+					Description = "[[Anno_2205]]"
 				},
 				new RecActivity
 				{

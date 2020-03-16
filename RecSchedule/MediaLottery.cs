@@ -120,10 +120,6 @@ namespace RecSchedule
 				},
 				new Movie
 				{
-					Name = "Se7en (carnage)"
-				},
-				new Movie
-				{
 					Name = "Rounders"
 				},
 				new Movie

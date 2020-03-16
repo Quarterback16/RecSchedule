@@ -11,16 +11,6 @@ namespace RecSchedule
 				new Entrant
 				{
 					Name = "[[FTL]]",
-					Balls = 4
-				},
-				new Entrant
-				{
-					Name = "[[GalacticCivilizations_3]]",
-					Balls = 5
-				},
-				new Entrant
-				{
-					Name = "[[Anno_2025]]",
 					Balls = 3
 				},
 				new Entrant
@@ -66,6 +56,11 @@ namespace RecSchedule
 				new Entrant
 				{
 					Name = "Alpha Centauri",
+					Balls = 1
+				},
+				new Entrant
+				{
+					Name = "Crying Suns",
 					Balls = 1
 				},
 			};
