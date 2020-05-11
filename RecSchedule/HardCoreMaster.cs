@@ -47,8 +47,8 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
-					Name = "Anno",
-					Description = "[[Anno_2205]]"
+					Name = "Old World",
+					Description = "OldWorld"
 				},
 				new RecActivity
 				{

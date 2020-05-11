@@ -88,7 +88,7 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Gym",
-						Description = "Pump",
+						Description = "--Pump-- [[Anno_1800]]",
 						Comment = "fixed: Homeworld"
 					}
 				},
@@ -100,7 +100,7 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Gym",
-						Description = "Pump",
+						Description = "--Pump-- [[Anno_1800]]",
 						Comment = "fixed: Homeworld"
 					}
 				},
@@ -148,7 +148,7 @@ namespace RecSchedule
 					Activity = new RecActivity
 					{
 						Name = "Gym",
-						Description = "Pump",
+						Description = "--Pump-- [[Anno_1800]]",
 						Comment = "fixed: Tuggeranong"
 					}
 				},

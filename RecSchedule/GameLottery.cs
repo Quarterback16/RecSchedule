@@ -10,6 +10,11 @@ namespace RecSchedule
 			{
 				new Entrant
 				{
+					Name = "[[Anno_1800]]",
+					Balls = 10
+				},
+				new Entrant
+				{
 					Name = "[[FTL]]",
 					Balls = 3
 				},
@@ -20,42 +25,42 @@ namespace RecSchedule
 				},
 				new Entrant
 				{
-					Name = "Defence Grid 2",
+					Name = "DefenceGrid 2",
 					Balls = 2
 				},
 				new Entrant
 				{
-					Name = "Ultima IV",
+					Name = "[[Ultima_IV]]",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Darkest Dungeon",
+					Name = "DarkestDungeon",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Divinity Original Sin",
+					Name = "DivinityOriginalSin",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Endless Legend",
+					Name = "EndlessLegend",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Endless Space",
+					Name = "EndlessSpace",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Master of Orion 2",
+					Name = "[[MasterOfOrion_2]]",
 					Balls = 1
 				},
 				new Entrant
 				{
-					Name = "Alpha Centauri",
+					Name = "AlphaCentauri",
 					Balls = 1
 				},
 				new Entrant

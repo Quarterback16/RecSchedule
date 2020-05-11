@@ -10,11 +10,12 @@ namespace RecSchedule
 		{
 			Entrants = new List<Entrant>
 			{
-				new Entrant
-				{
-					Name = "The Expanse",
-					Balls = 40
-				},
+				// finished season 4
+				//new Entrant
+				//{
+				//	Name = "The Expanse",
+				//	Balls = 40
+				//},
 				new Entrant
 				{
 					Name = "Altered Carbon",

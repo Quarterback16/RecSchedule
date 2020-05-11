@@ -28,8 +28,8 @@ namespace RecSchedule
 				},
 				new RecActivity
 				{
-					Name = "Gwent",
-					Description = "[[Gwent]]"  //  to do make this a hwiki link
+					Name = "Anno",
+					Description = "[[Anno_1800]]"  //  to do make this a hwiki link
 				},
 				new RecActivity
 				{

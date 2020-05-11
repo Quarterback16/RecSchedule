@@ -11,3 +11,5 @@ E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\bin\Release\netcoreapp3.1\RecS
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Release\netcoreapp3.1\RecSchedule.dll
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Release\netcoreapp3.1\RecSchedule.pdb
 E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Release\netcoreapp3.1\RecSchedule.csprojAssemblyReference.cache
+E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Release\netcoreapp3.1\RecSchedule.csproj.CoreCompileInputs.cache
+E:\FileSync\SyncProjects\RecSchedule2\RecSchedule\obj\Release\netcoreapp3.1\RecSchedule.genruntimeconfig.cache
