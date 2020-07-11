@@ -125,10 +125,6 @@ namespace RecSchedule
 				},
 				new Movie
 				{
-					Name = "JoJo Rabbit"
-				},
-				new Movie
-				{
 					Name = "The House"
 				},
 				new Movie

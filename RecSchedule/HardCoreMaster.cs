@@ -33,7 +33,7 @@ namespace RecSchedule
 				new RecActivity
 				{
 					Name = "Hearthstone Ladder Runs",
-					Description = HearthstoneLink()
+					Description = HearthstoneLink("Runs")
 				},
 				new RecActivity
 				{
@@ -44,6 +44,11 @@ namespace RecSchedule
 				{
 					Name = "Next Learning Project",
 					Description = "NextLearningProject"
+				},
+				new RecActivity
+				{
+					Name = "Anno",
+					Description = "[[Anno-1800]]"
 				},
 				new RecActivity
 				{

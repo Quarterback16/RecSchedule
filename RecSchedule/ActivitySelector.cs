@@ -41,9 +41,9 @@ namespace RecSchedule
 			return _countMaster.TheHt.Count;
 		}
 
-		public string HearthstoneLink()
+		public string HearthstoneLink( string comment = "" )
 		{
-			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]]";
+			return $"[[Hearthstone-{DateTime.Now.AddDays(1).ToString("yyyy-MM")}]] {comment}";
 		}
 	}
 }

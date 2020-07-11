@@ -26,11 +26,11 @@ namespace RecSchedule
 					Name = "Hearthstone",
 					Description = HearthstoneLink()
 				},
-				new RecActivity
-				{
-					Name = "Anno",
-					Description = "[[Anno_1800]]"  //  to do make this a hwiki link
-				},
+				//new RecActivity
+				//{
+				//	Name = "Anno",
+				//	Description = "[[Anno_1800]]"  //  to do make this a hwiki link
+				//},
 				new RecActivity
 				{
 					Name = "Reading",

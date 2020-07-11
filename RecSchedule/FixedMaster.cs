@@ -83,30 +83,6 @@ namespace RecSchedule
 				new RecSession
 				{
 					SessionType = SessionType.Casual,
-					SessionDate = new DateTime(2020, 1, 7),  // tuesday
-					StartTime = "1930",
-					Activity = new RecActivity
-					{
-						Name = "Gym",
-						Description = "--Pump-- [[Anno_1800]]",
-						Comment = "fixed: Homeworld"
-					}
-				},
-				new RecSession
-				{
-					SessionType = SessionType.Casual,
-					SessionDate = new DateTime(2020, 1, 9),  // thursday
-					StartTime = "1930",
-					Activity = new RecActivity
-					{
-						Name = "Gym",
-						Description = "--Pump-- [[Anno_1800]]",
-						Comment = "fixed: Homeworld"
-					}
-				},
-				new RecSession
-				{
-					SessionType = SessionType.Casual,
 					SessionDate = new DateTime(2020, 1, 8),  // wednesday
 					StartTime = "1930",
 					Activity = new RecActivity
@@ -138,18 +114,6 @@ namespace RecSchedule
 						Name = "Forced booking to create slack time",
 						Description = "   ",
 						Comment = "fixed: unallocated"
-					}
-				},
-				new RecSession
-				{
-					SessionType = SessionType.Casual,
-					SessionDate = new DateTime(2020, 1, 11),  // saturday
-					StartTime = "0930",
-					Activity = new RecActivity
-					{
-						Name = "Gym",
-						Description = "--Pump-- [[Anno_1800]]",
-						Comment = "fixed: Tuggeranong"
 					}
 				},
 				new RecSession

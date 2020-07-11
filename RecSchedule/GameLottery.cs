@@ -10,6 +10,10 @@ namespace RecSchedule
 			{
 				new Entrant
 				{
+					Name = "[[CivilizationVI]]",
+					Balls = 20
+				},new Entrant
+				{
 					Name = "[[Anno_1800]]",
 					Balls = 10
 				},
